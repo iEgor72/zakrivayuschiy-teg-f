@@ -1,1 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'Press Start 2P', fantasy;
+  --text-font-weight: 400;
+  --title-font-weight: 700;
+  --background-color: #fff;
+  --accent-color: #000;
+  --background-image-lines: #d3d3d3;
+  --background-image: #e7e7e7 0.01%, #1a1a1a;
+  --content-width: clamp(375px, 48.7%, 700px);
+  --border: 2px solid var(--accent-color);
+  --mix-blend-color: #fff;
+  --animation-fill-color: #ff0000;
+}
