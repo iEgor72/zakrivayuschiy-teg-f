@@ -62,19 +62,13 @@
   text-decoration: none;
   color: inherit;
   text-align: center;
-  transition: opacity 0.3s ease;
 }
 
 .logo-group__title:focus {
   outline: none;
 }
 
-.logo-group__title:focus-visible {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 4px;
-}
-
-.logo-group__title-second {
+.logo-group__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-align: center;
 }
@@ -108,35 +102,36 @@
 .card__image {
   display: block;
   inline-size: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
 }
 
-.card__image--saturate-02 {
+.filter-saturate-low {
   filter: saturate(0.2);
 }
 
-.card__image--saturate-35 {
+.filter-saturate-high {
   filter: saturate(3.5);
 }
 
-.card__image--hue-30 {
+.filter-hue-rotate {
   filter: hue-rotate(30deg);
 }
 
-.card__image--invert {
+.filter-invert {
   filter: invert(0.8);
 }
 
-.card__image--sepia {
+.filter-sepia {
   filter: sepia(0.9);
 }
 
-.card__image--blur {
+.filter-blur {
   filter: blur(10px);
 }
 
-.card__image--mix {
+.filter-multiple {
   filter: brightness(0.6) contrast(1.4) saturate(1.5);
 }
 
@@ -177,7 +172,7 @@
   gap: 27px;
   padding: 25px;
   font-size: 1.125rem;
-  line-height: 117%;
+  line-height: 1.17;
 }
 
 .card__button-block {
@@ -266,7 +261,7 @@
   z-index: 1;
   font-family: var(--accent-font);
   font-size: 14px;
-  line-height: 90%;
+  line-height: 0.9;
   color: var(--mix-blend-color);
   mix-blend-mode: difference;
 }
@@ -319,7 +314,7 @@
 .dialog__title {
   font-family: var(--accent-font);
   font-size: 0.875rem;
-  line-height: 150%;
+  line-height: 1.5;
   text-transform: uppercase;
   color: var(--accent-color);
 }
@@ -370,10 +365,6 @@
 @media (hover: hover) and (pointer: fine) {
   .button:hover::before {
     transform: scale(1, 1);
-  }
-
-  .logo-group__title:hover {
-    opacity: 0.6;
   }
 
   .like-icon:hover .core {
